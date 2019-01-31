@@ -28,8 +28,9 @@ class Header extends React.Component{
   render() {
     return (
       <div>
-        <Navbar fixed="top" light expand='sm'>
-          <NavbarBrand href="/">{this.props.siteTitle}</NavbarBrand>
+        <Navbar fixed='top' light expand='sm'>
+        <div className='container'>
+        <NavbarBrand href="/">{this.props.siteTitle}</NavbarBrand>
           <NavbarToggler onClick={this.toggle}/>
           <Collapse isOpen={!this.state.collapsed} navbar>
             <Nav className='ml-auto' navbar>
@@ -46,7 +47,9 @@ class Header extends React.Component{
                 <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
               </NavItem>
             </Nav>
-          </Collapse>
+          </Collapse>       
+        </div>
+          
         </Navbar>
       </div>
     );
